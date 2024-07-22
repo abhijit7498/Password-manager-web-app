@@ -57,7 +57,6 @@ const Manager = () => {
                     draggable: true,
                     progress: undefined,
                     theme: "light",
-                    transition: "bounce"
                 });
 
             } catch (error) {
@@ -71,7 +70,6 @@ const Manager = () => {
                     draggable: true,
                     progress: undefined,
                     theme: "light",
-                    transition: "bounce"
                 });
             }
         } else {
@@ -160,6 +158,18 @@ const Manager = () => {
 
     return (
         <>
+            <ToastContainer
+                position="top-center"
+                autoClose={2000}
+                hideProgressBar={false}
+                newestOnTop
+                closeOnClick
+                rtl={false}
+                pauseOnFocusLoss
+                draggable
+                pauseOnHover
+                theme="light"
+            />
             <div className="absolute top-0 z-[-2] h-screen w-screen rotate-180 transform bg-white bg-[radial-gradient(60%_120%_at_50%_50%,hsla(0,0%,100%,0)_0,rgba(252,205,238,.5)_100%)]"></div>
             <div className="container max-w-4xl mx-auto p-4">
                 <div className="flex flex-col">
@@ -233,19 +243,7 @@ const Manager = () => {
                 </div>
             </div>
 
-            <ToastContainer
-                position="top-center"
-                autoClose={2000}
-                hideProgressBar={false}
-                newestOnTop
-                closeOnClick
-                rtl={false}
-                pauseOnFocusLoss
-                draggable
-                pauseOnHover
-                theme="light"
-                transition="bounce"
-            />
+            
         </>
     );
 };
